@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-ver=${VERSION:="1.5.2"}
+ver=${VERSION:="1.7.1"}
 exp_name=prometheus
 
 NAME=$(basename $(dirname $PWD/Dockerfile))
