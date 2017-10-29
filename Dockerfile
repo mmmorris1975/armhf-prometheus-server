@@ -17,5 +17,5 @@ CMD        [ "-config.file=/etc/prometheus/prometheus.yml", \
              "-storage.local.path=/prometheus", \
              "-web.console.libraries=/usr/share/prometheus/console_libraries", \
              "-web.console.templates=/usr/share/prometheus/consoles" ]
-HEALTHCHECK --start-period=10m --interval=10s --timeout=5s --retries=3 \
-  CMD ['wget', '-q', '-O', '/dev/null', 'http://localhost:9090/prometheus/graph']
+HEALTHCHECK --start-period=8m --interval=10s --timeout=5s --retries=3 \
+  CMD ["/bin/wget", "-q", "-O", "/dev/null", "http://localhost:9090/prometheus/graph"]
